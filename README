@@ -1,0 +1,32 @@
+# MoodPulse | Interactive Activity Recommender
+
+## Project Overview
+
+MoodPulse is a web app that suggests activities based on a user's mood—Happy, Tired, Bored, or Stressed. Built as the **Developer** for a classmate's project idea, this tool focuses on clean UI and functional vanilla JavaScript.
+
+## Core Features
+
+- **Mood Selection:** Instant activity suggestions via interactive cards.
+- **Try Another:** Simple cycling through multiple options per category.
+- **Favorites Gallery:** Persistent storage for user saved activities.
+- **Recent Pulses:** A live history log tracking the last three selections.
+
+## Technical Implementation
+
+- **SPA Navigation:** Used event listeners and class toggling for a single-page feel.
+- **LocalStorage:** Utilized `JSON.stringify/parse` to save data across sessions.
+- **DOM Manipulation:** Updated images and text dynamically based on user input.
+
+## Key Challenges & Solutions
+
+### 1. History Management (While Loop)
+
+To keep the history list relevant and limited to exactly three items, I used an `unshift` method combined with a **while loop**. The loop checks the array length and `pop`s the oldest entries until only the three most recent remain.
+
+### 2. "Try Another" Logic
+
+The main hurdle was state tracking. I created a `lastSelectedMood` variable and a `moodIndex` to "remember" which list the user was on. This allowed the button to cycle through activities in a predictable loop instead of resetting or picking randomly.
+
+## AI Acknowledgment
+
+In this process, **AI acted as a technical advisor and guide**. I consulted it to help structure the history logic and debug state-tracking for the "Try Another" feature. This allowed me to meet all client requirements while deepening my understanding of core JS concepts.

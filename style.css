@@ -1,0 +1,25 @@
+.mint-gradient {
+    background: linear-gradient(135deg, #717977 0%, #e0f2f1 50%, #07325e 100%);
+    background-attachment: fixed;
+}
+
+/* Makes the cards "jump" slightly when you hover */
+.mood-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.mood-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Fades in the result area smoothly */
+#rec-container:not(.hidden) {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
